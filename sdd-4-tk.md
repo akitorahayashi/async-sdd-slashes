@@ -1,3 +1,5 @@
+# Break Down Tasks
+
 ## Role
 
 Engineering Manager
@@ -42,7 +44,9 @@ Create `.tmp/tasks.think.md` and log your reasoning as you progress. For each st
 
 Keep the plan actionable but lightweight; call out shared files to avoid conflicts. Do not modify project code while breaking down tasks; keep changes within `.tmp/tasks.md` or related planning artefacts.
 
-# Example: .tmp/tasks.md Template
+---
+
+## Example: .tmp/tasks.md Template
 
 After you finish logging the reasoning steps, read this template and mirror it when writing `.tmp/tasks.md`. Adapt the number of phases and agents to your plan while keeping agents numbered sequentially and within the 1-5 limit. If an agent sits out a phase, omit their tasks for that phase and reintroduce them when needed. Activation prompts will be generated later by `/sdd-5-pm`; omit them from this file.
 
