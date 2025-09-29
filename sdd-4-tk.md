@@ -71,7 +71,7 @@ Before any agent begins, ensure they do all of the following:
 - Review the relevant sections in `.tmp/design.md` for implementation details and file paths.
 - Study this file (`.tmp/tasks.md`) to understand sequencing and ownership.
 - Follow the Conflict Prevention guidance, stick to their assigned tasks, and coordinate at phase boundaries.
-- Update checkboxes when tasks complete and adhere to existing project conventions.
+- Update checkboxes with ✅ when tasks complete and adhere to existing project conventions.
 
 ### Phase 1: Foundation
 **Goal**: [Core implementation without dependencies]

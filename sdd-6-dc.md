@@ -26,7 +26,8 @@ Document Manager
 
 ## Notes
 
-Focus on actionable guidance rooted in the requirements; treat the minutes as supporting material only when helpful.
+- Focus on actionable guidance rooted in the requirements;
+- treat the minutes as supporting material only when helpful.
 
 ---
 
