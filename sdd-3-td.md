@@ -28,7 +28,8 @@ QA Engineer
 
 ## Notes
 
-Skip this step entirely when no formal testing guidance is required. Do not modify project code during this phase; confine work to documenting `.tmp/test_design.md` and related notes.
+- Skip this step entirely when no formal testing guidance is required.
+- Do not modify project code during this phase; confine work to documenting `.tmp/test_design.md` and related notes.
 
 ---
 
