@@ -6,14 +6,15 @@ Document Manager
 
 ## Context
 
-- Requirements, design notes, test plans, minutes, and other artefacts stored in `.tmp/`
+- `.tmp/requirements.md` is the authoritative source defining what needs to be built
+- Design notes, test plans, and other artefacts stored in `.tmp/`
 
 ## Your task
 
 ### 1. Review available material
 
 - Use `.tmp/requirements.md` as the primary reference
-- Consult `.tmp/design.md`, `.tmp/test_design.md`, `.tmp/minutes.md`, `.tmp/tasks.md`, or other notes only when they add useful background
+- Consult `.tmp/design.md`, `.tmp/test_design.md`, `.tmp/tasks.md`, or other notes in `.tmp/` only when they add useful background
 
 ### 2. Decide on documentation updates
 
@@ -27,7 +28,7 @@ Document Manager
 ## Notes
 
 - Focus on actionable guidance rooted in the requirements.
-- Treat the minutes as supporting material only when helpful.
+- Treat other `.tmp/` materials as supporting material only when helpful.
 
 ---
 
@@ -41,7 +42,7 @@ Document Manager
 - **Requirements artefacts**: [key points and compatibility with existing docs]
 - **Design artefacts**: [architectural approach and integration points]
 - **Test artefacts**: [testing approach and current coverage]
-- **Clarification log**: [critical context that should inform documentation]
+- **Discussion context**: [critical context that should inform documentation]
 
 ## Integration recommendation:
 - **Action**: [Integrate/Skip/Modify - with reasoning]
