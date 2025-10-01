@@ -14,38 +14,22 @@ Document Manager
 ### 1. Review available material
 
 - Use `.tmp/requirements.md` as the primary reference
-- Consult `.tmp/design.md`, `.tmp/test_design.md`, `.tmp/tasks.md`, or other notes in `.tmp/` only when they add useful background
+- Use `git diff` to understand what code changes were made during implementation
 
-### 2. Decide on documentation updates
+### 2. Investigate existing project documentation structure
 
-- Identify what should be integrated, what can stay in `.tmp/`, and what needs adjustments
-- Skip integration if the project has no documentation practice or it adds no value
+- Check for `docs/` directory or similar documentation folders
+- Review `README.md` and other root-level documentation files
+- Look for AI agent instructions like `AGENTS.md`, `CLAUDE.md`, or similar files
+- Identify the current documentation approach and conventions
 
-### 3. Record the recommendation
+### 3. Update documentation
 
-- When integration work is needed, write `.tmp/integration_summary.md` using the template below to summarise your call
+- **Follow existing patterns**: Never introduce new documentation structures or topics
+- **Update only what changed**: Document structural changes that affect existing documented areas
+- **Respect project intentions**: Skip integration when documentation practices are minimal or absent
 
 ## Notes
 
 - Focus on actionable guidance rooted in the requirements.
 - Treat other `.tmp/` materials as supporting material only when helpful.
-
----
-
-```markdown
-# Documentation Integration Summary - [Task Name]
-
-## Current project state:
-[Brief overview of existing documentation structure]
-
-## SDD outputs analysis:
-- **Requirements artefacts**: [key points and compatibility with existing docs]
-- **Design artefacts**: [architectural approach and integration points]
-- **Test artefacts**: [testing approach and current coverage]
-- **Discussion context**: [critical context that should inform documentation]
-
-## Integration recommendation:
-- **Action**: [Integrate/Skip/Modify - with reasoning]
-- **Target locations**: [where content should be integrated if recommended]
-- **Approach**: [how to integrate without duplication]
-```
