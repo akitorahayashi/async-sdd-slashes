@@ -19,7 +19,7 @@ Through dialogue with the user, understand their true requirements and distill t
 
 Extract the concentrated essence of what truly needs to be accomplished from the conversation and create a clear, concise, and actionable document.
 
-#### Output
+### Output
 Create `.tmp/requirements.md` - the central document that defines what needs to be built. This file is the foundation of the entire SDD process:
 
 - **Single Source of Truth**: The definitive reference for project scope and success criteria
