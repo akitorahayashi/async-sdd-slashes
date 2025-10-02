@@ -12,9 +12,11 @@ The SDD process is structured around specialized roles, each contributing to a p
 - **sdd-1-d.md**: Software Architect - Outlines the solution architecture and implementation plan.
 - **sdd-2-td.md**: QA Engineer - Plans testing strategies and coverage.
 - **sdd-3-tk.md**: Engineering Manager - Breaks down tasks into phases and assigns agents.
-- **sdd-4-pm.md**: Prompt Engineer - Creates activation prompts for agents based on tasks.
-- **sdd-5-dc.md**: Document Manager - Recommends documentation integration and updates.
+- **sdd-4-pm.md**: Prompt Engineer - Creates activation prompts for agents and reviewer.
+- **sdd-5-dc.md**: Document Manager - Updates documentation after implementation.
 
 ## Usage
 
-Follow the SDD process by activating each role in sequence, using the `.tmp/` directory for intermediate artifacts like `minutes.md`, `requirements.md`, etc. This framework helps build robust CLI tools through structured development.
+1. Run sdd-0 through sdd-4 to generate requirements, design, tasks, and prompts
+2. Use Reviewer prompts from `.tmp/prompts.md` to integrate each phase
+3. Run sdd-5-dc to update documentation
