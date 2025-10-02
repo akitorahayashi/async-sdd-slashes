@@ -66,7 +66,9 @@ Before any agent begins, ensure they do all of the following:
 - Review the relevant sections in `.tmp/design.md` for implementation details and file paths.
 - Study this file (`.tmp/tasks.md`) to understand sequencing and ownership.
 - Work in parallel with other agents - the orchestrator will handle any conflicts that arise.
-- Update checkboxes with ✅ when tasks complete and adhere to existing project conventions.
+- Adhere to existing project conventions.
+
+**Note**: Agents do NOT update checkboxes. The orchestrator monitors agent completion via `jj op log` and updates checkboxes after verifying each phase's integration.
 
 ### Phase 1: Foundation
 **Goal**: [Core implementation without dependencies]

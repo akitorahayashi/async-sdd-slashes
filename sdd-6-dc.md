@@ -14,7 +14,8 @@ Document Manager
 ### 1. Review available material
 
 - Use `.tmp/requirements.md` as the primary reference
-- Use `git diff` to understand what code changes were made during implementation
+- Use `jj diff --from main --to @` to understand what code changes were made during implementation
+- For file-level summaries: `jj diff --from main --to @ --stat`
 
 ### 2. Investigate existing project documentation structure
 

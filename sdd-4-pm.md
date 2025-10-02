@@ -44,22 +44,19 @@ Prompt Engineer
 ## Prompts by Phase
 
 ### Phase 1
-- **Agent 1**: "You are agent1, at .tmp/tasks.md. Work according to Phase 1 tasks assigned to Agent 1."
-- **Agent 2**: "You are agent2, at .tmp/tasks.md. Work according to Phase 1 tasks assigned to Agent 2."
-- **Agent 3**: "You are agent3, at .tmp/tasks.md. Work according to Phase 1 tasks assigned to Agent 3."
-- **Agent 4**: "You are agent4, at .tmp/tasks.md. Work according to Phase 1 tasks assigned to Agent 4."
-- **Orchestrator**: "Phase 1 has been merged. If there are conflicts, resolve them. Then, verify the integrated code builds and passes all tests."
+- **Agent 1**: "You are agent1. Read `.tmp/requirements.md`, `.tmp/design.md`, and `.tmp/tasks.md`. Execute Phase 1 tasks assigned to Agent 1. Do NOT update checkboxes in `.tmp/tasks.md`."
+- **Agent 2**: "You are agent2. Read `.tmp/requirements.md`, `.tmp/design.md`, and `.tmp/tasks.md`. Execute Phase 1 tasks assigned to Agent 2. Do NOT update checkboxes in `.tmp/tasks.md`."
+- **Agent 3**: "You are agent3. Read `.tmp/requirements.md`, `.tmp/design.md`, and `.tmp/tasks.md`. Execute Phase 1 tasks assigned to Agent 3. Do NOT update checkboxes in `.tmp/tasks.md`."
+- **Agent 4**: "You are agent4. Read `.tmp/requirements.md`, `.tmp/design.md`, and `.tmp/tasks.md`. Execute Phase 1 tasks assigned to Agent 4. Do NOT update checkboxes in `.tmp/tasks.md`."
 
 ### Phase 2
-- **Agent 1**: "Once Phase 1 is complete, return to .tmp/tasks.md and execute your Phase 2 tasks for Agent 1."
-- **Agent 2**: "Once Phase 1 is complete, return to .tmp/tasks.md and execute your Phase 2 tasks for Agent 2."
-- **Orchestrator**: "Phase 2 has been merged. If there are conflicts, resolve them. Then, verify the integrated code builds and passes all tests."
+- **Agent 1**: "Phase 1 integration is complete. Read `.tmp/tasks.md` and execute your Phase 2 tasks for Agent 1. Do NOT update checkboxes."
+- **Agent 2**: "Phase 1 integration is complete. Read `.tmp/tasks.md` and execute your Phase 2 tasks for Agent 2. Do NOT update checkboxes."
 
 ### Phase 3
-- **Agent 1**: "Once Phase 2 is complete, return to .tmp/tasks.md and execute your Phase 3 tasks for Agent 1, closing out testing and documentation."
-- **Agent 2**: "Once Phase 2 is complete, return to .tmp/tasks.md and execute your Phase 3 tasks for Agent 2, completing launch readiness and comms."
-- **Agent 3**: "Once Phase 2 is complete, return to .tmp/tasks.md and execute your Phase 3 tasks for Agent 3."
-- **Orchestrator**: "Phase 3 has been merged. If there are conflicts, resolve them. Then, verify the integrated code builds and passes all tests."
-
-Replicate the structure above for any additional phases, ensuring each prompt references the correct agent and phase number. Add an Orchestrator prompt after each phase to resolve conflicts, verify the build, and run tests.
+- **Agent 1**: "Phase 2 integration is complete. Read `.tmp/tasks.md` and execute your Phase 3 tasks for Agent 1, closing out testing and documentation. Do NOT update checkboxes."
+- **Agent 2**: "Phase 2 integration is complete. Read `.tmp/tasks.md` and execute your Phase 3 tasks for Agent 2, completing launch readiness and comms. Do NOT update checkboxes."
+- **Agent 3**: "Phase 2 integration is complete. Read `.tmp/tasks.md` and execute your Phase 3 tasks for Agent 3. Do NOT update checkboxes."
 ```
+
+Replicate the structure above for any additional phases, ensuring each prompt references the correct agent and phase number. 
