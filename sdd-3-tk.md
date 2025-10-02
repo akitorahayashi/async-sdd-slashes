@@ -19,31 +19,25 @@ Create `.tmp/tasks.think.md` and log your reasoning as you progress. For each st
 - Use `.tmp/design.md`, `.tmp/test_design.md`, or other notes in `.tmp/` only to supplement the plan when they exist
 - Record key context in `.tmp/tasks.think.md` under `## Step 1: Gather the inputs` before progressing.
 
-### 2. Map conflicts before planning
+### 2. Design phases and agent usage
 
-- Identify shared files, global configurations, and fragile components that must stay under single ownership.
-- Capture dependencies and handoff risks upfront so later phase and agent choices respect these constraints.
-- Summarize conflict risks in `.tmp/tasks.think.md` under `## Step 2: Map conflicts before planning`.
-
-### 3. Design phases and agent usage
-
-- Choose the minimum number of phases that enables safe parallel progress while reflecting how the codebase will evolve.
+- Choose the minimum number of phases that enables maximum parallel progress while reflecting how the codebase will evolve.
 - Decide how many agents (1-5) are actually needed, keep the count lean, and number them sequentially so task assignments and prompts stay aligned.
 - Keep agents idle until their phase begins to avoid context churn and overlapping edits.
-- Never split conflict-prone work across multiple agents or phases.
-- Document chosen phases, agent assignments, and rationale in `.tmp/tasks.think.md` under `## Step 3: Design phases and agent usage`.
+- Prioritize parallel work even if it creates conflicts - the orchestrator will handle conflict resolution after each phase.
+- Document chosen phases, agent assignments, and rationale in `.tmp/tasks.think.md` under `## Step 2: Design phases and agent usage`.
 
-### 4. Build `.tmp/tasks.md`
+### 3. Build `.tmp/tasks.md`
 
 - Review the notes captured in `.tmp/tasks.think.md`.
 - When the thinking log feels solid, open `.tmp/tasks.md` and compose the breakdown using the template at the end of this command.
-- Base each section on the decisions recorded in `.tmp/tasks.think.md` so ownership, sequencing, and risks stay aligned.
-- Highlight opportunities for safe concurrency only after the conflict boundaries are fixed.
-- Update the Conflict Prevention guidance whenever task assignments or sequencing change.
+- Base each section on the decisions recorded in `.tmp/tasks.think.md` so ownership and sequencing stay aligned.
+- Maximize opportunities for parallel work - agents can work simultaneously even on shared files.
+- Note any critical coordination points between phases if needed.
 
 ## Notes
 
-Keep the plan actionable but lightweight; call out shared files to avoid conflicts. Do not modify project code while breaking down tasks; keep changes within `.tmp/tasks.md` or related planning artefacts.
+Keep the plan actionable but lightweight. Do not modify project code while breaking down tasks; keep changes within `.tmp/tasks.md` or related planning artefacts.
 
 ---
 
@@ -61,7 +55,7 @@ After you finish logging the reasoning steps, read this template and mirror it w
 ## Agent Assignment Strategy
 - [List the agents in sequential order starting from Agent 1, describing their focus areas and responsibilities. Include only the agents you plan to activate for this effort.]
 - **Continuity**: Each agent maintains context and ownership of their work throughout the project
-- **Conflict zones**: [files/areas requiring single-agent ownership to prevent merge conflicts]
+- **Coordination notes** (optional): [Any critical handoff points or phase transition requirements]
 
 ## All Tasks Summary
 
@@ -71,7 +65,7 @@ Before any agent begins, ensure they do all of the following:
 - Read `.tmp/requirements.md` for the definitive brief.
 - Review the relevant sections in `.tmp/design.md` for implementation details and file paths.
 - Study this file (`.tmp/tasks.md`) to understand sequencing and ownership.
-- Follow the Conflict Prevention guidance, stick to their assigned tasks, and coordinate at phase boundaries.
+- Work in parallel with other agents - the orchestrator will handle any conflicts that arise.
 - Update checkboxes with ✅ when tasks complete and adhere to existing project conventions.
 
 ### Phase 1: Foundation
