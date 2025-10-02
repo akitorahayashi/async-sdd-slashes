@@ -21,7 +21,7 @@ Create `.tmp/tasks.think.md` and log your reasoning as you progress. For each st
 
 ### 2. Design phases and agent usage
 
-- Choose the minimum number of phases that enables maximum parallel progress while reflecting how the codebase will evolve.
+- Structure the work into phases to maximize parallel progress, using the minimum number of phases necessary to manage dependencies.
 - Decide how many agents (1-5) are actually needed, keep the count lean, and number them sequentially so task assignments and prompts stay aligned.
 - Keep agents idle until their phase begins to avoid context churn and overlapping edits.
 - Prioritize parallel work even if it creates conflicts - the orchestrator will handle conflict resolution after each phase.
