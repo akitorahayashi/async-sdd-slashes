@@ -13,7 +13,6 @@ The SDD process is structured around specialized roles, each contributing to a p
 - **sdd-2-td.md**: QA Engineer - Plans testing strategies and coverage.
 - **sdd-3-tk.md**: Engineering Manager - Breaks down tasks into phases and assigns agents.
 - **sdd-4-pm.md**: Prompt Engineer - Creates activation prompts for agents and reviewer.
-- **sdd-5-dc.md**: Document Manager - Updates documentation after implementation.
 
 ## Usage
 

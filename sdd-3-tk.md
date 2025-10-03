@@ -30,47 +30,45 @@ Engineering Manager
 
 ---
 
-## Example: .tmp/tasks.md Template
+## Task Breakdown Patterns
 
-After you finish logging the reasoning steps, read this template and mirror it when writing `.tmp/tasks.md`. Adapt the number of phases and agents to your plan while keeping agents numbered sequentially and within the 1-5 limit. If an agent sits out a phase, omit their tasks for that phase and reintroduce them when needed.
+Apply these patterns when creating `.tmp/tasks.md`:
 
+**Typical Phase Flow**:
+1. **Parallel Implementation**: Maximize agents on independent features
+2. **Integration**: Fewer agents (1-2) to reduce merge conflicts
+3. **Testing**: Mocks → tests → CI updates → test runs → fixes
+4. **Quality**: Single agent for linting/formatting
+5. **Documentation** (if needed): Update only changed areas, follow existing patterns
+
+**Agent Strategy**:
+- Total: 1-5 agents, numbered sequentially
+- Per phase: Vary count based on parallelization potential
+- Reduce agents to prevent conflicts during integration/sequential tasks
+- Allow parallel work on shared files when changes are additive (e.g., multiple agents writing independent test fixtures to shared config)
+
+**Task Format**: `- [ ] [Action on specific/path/file.ext] (Agent N)`
+
+**Template**:
 ```markdown
-# Task Breakdown - [Task Name]
+# Task Breakdown - [Name]
 
 ## Overview
-- Total agents: [1-5, choose the minimum that fits the scope]
-- Phases: [positive integer count matching the plan]
+- Total agents: [1-5]
+- Phases: [count]
 
 ## All Tasks Summary
 
-Fill in each phase using the ownership decisions captured in `.tmp/tasks.think.md`. Use the `- [ ] [Task summary] (Agent X)` format for every line.
+Before starting:
+- Read `.tmp/requirements.md`, `.tmp/design.md`, `.tmp/tasks.md`
+- Follow project conventions
+- Mark completed tasks with ✅
 
-Before any agent begins, ensure they do all of the following:
-- Read `.tmp/requirements.md` for the definitive brief.
-- Review the relevant sections in `.tmp/design.md` for implementation details and file paths.
-- Study this file (`.tmp/tasks.md`) to understand sequencing and ownership.
-- Work in parallel with other agents - the orchestrator will handle any conflicts that arise.
-- Adhere to existing project conventions.
-- update `.tmp/tasks.md` checkboxes with ✅ for completed tasks in your task.
+After implementation (if documentation exists):
+- Update docs only where structural changes occurred
+- Follow existing documentation patterns
 
-### Phase 1: Foundation
-**Goal**: [Core implementation without dependencies]
-- [ ] [Task 1 summary] (Agent 1)
-- [ ] [Task 2 summary] (Agent 1)
-- [ ] [Task 3 summary] (Agent 2)
-- [ ] [Task 4 summary] (Agent 2)
-- [ ] [Task 5 summary] (Agent 3)
-- [ ] [Task 6 summary] (Agent 4)
-
-### Phase 2: Integration
-**Goal**: [Connect components and test interactions]
-- [ ] [Integration task summary] (Agent 1)
-- [ ] [Follow-on integration task summary] (Agent 2)
-
-### Phase 3: Testing & Polish
-**Goal**: [Comprehensive testing and documentation]
-- [ ] [Frontend validation summary] (Agent 1)
-- [ ] [Backend validation summary] (Agent 2)
-- [ ] [Integration validation summary] (Agent 3)
-- [ ] [Documentation polish summary] (Agent 3)
+### Phase N: [Name]
+**Goal**: [Objective]
+- [ ] [Task with file path] (Agent X)
 ```
