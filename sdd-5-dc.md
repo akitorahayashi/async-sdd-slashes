@@ -29,8 +29,3 @@ Document Manager
 - **Follow existing patterns**: Prefer existing documentation structures and topics; introduce new ones only when current patterns are inadequate
 - **Update only what changed**: Document structural changes that affect existing documented areas
 - **Respect project intentions**: Skip integration when documentation practices are minimal or absent
-
-## Notes
-
-- Focus on actionable guidance rooted in the requirements.
-- Treat other `.tmp/` materials as supporting material only when helpful.
