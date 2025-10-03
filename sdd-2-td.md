@@ -16,21 +16,23 @@ QA Engineer
 - Rely on `.tmp/requirements.md` for the definitive scope
 - Use `.tmp/design.md` when present, and review other notes in `.tmp/` only for supporting background
 
-### 2. Plan the tests
+### 2. Investigate existing test structure
 
-- Start by mapping the requirements to existing suites, scripts, and CI jobs
+- Examine current testing practices (test frameworks, naming conventions, CI setup)
+- Identify existing test suites, scripts, and CI jobs that may already cover related functionality
+- Understand the project's testing culture and conventions
+
+### 3. Plan the tests
+
+- **Respect project testing culture**: Adapt to existing testing patterns; skip formal test planning when project has minimal testing practices
+- Map requirements to existing suites, scripts, and CI jobs
 - Call out only the additional coverage that is actually needed (leave a note when no new tests are required)
 - Note required test data, mocks, or manual checks when they are not already covered elsewhere
 
-### 3. Record the plan
+### 4. Record the plan
 
 - Capture the outcome in `.tmp/test_design.md`, referencing the template below and pruning sections that do not apply
-- Prefer linking to existing playbooks/commands over redefining them; highlight gaps only when something truly new is required
-
-## Notes
-
-- Skip this step entirely when no formal testing guidance is required.
-- Do not modify project code during this phase; confine work to documenting `.tmp/test_design.md` and related notes.
+- Documentation only; do not modify project code during this phase
 
 ---
 
